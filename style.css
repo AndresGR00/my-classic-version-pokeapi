@@ -1,0 +1,213 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  color-scheme: light dark;
+  color: rgba(34, 33, 33, 0.87);
+  background-color: #d7d7d7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --pokemon-color: #f5c400;
+  --pokemon-color-next: #ffffff;
+  --pokemon-color-previous: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+
+h1,
+h2,
+p {
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+/* Display Styles */
+
+.pk-display-flex {
+  display: flex;
+}
+.pk-display-flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* End Display Styles */
+
+.pk-spans {
+  align-items: center;
+  justify-content: center;
+  top: 43.8%;
+  right: 0%;
+  position: absolute;
+  width: 100%;
+  gap: 14.5em;
+  z-index: 2;
+}
+
+.pk-container {
+  min-height: 100vh;
+  min-width: 100vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pk-three-cards {
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  min-width: 100%;
+  min-height: 70vh;
+  gap: 10px;
+}
+.pk-previous-card {
+  background-image: linear-gradient(
+    to bottom,
+    var(--pokemon-color-previous) 20%,
+    rgba(255, 255, 255) 50%
+  );
+  height: 367px;
+  width: 236.66px;
+  border-radius: 7px;
+  align-items: center;
+  overflow: hidden;
+  filter: blur(7px);
+}
+
+.pk-previous-card .pk-type-name{
+  background-color: var(--pokemon-color-previous);
+}
+
+.pk-previous-card .pk-info-buttons button:hover, .pk-info-buttons button:active {
+  background-color: var(--pokemon-color-previous);
+}
+.pk-previous-card button {
+  border-color: var(--pokemon-color-previous);
+}
+
+.pk-current-card {
+  background-image: linear-gradient(
+    to bottom,
+    var(--pokemon-color) 20%,
+    rgba(255, 255, 255) 50%
+  );
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+  min-width: 236.66px;
+  height: 367px;
+  border-radius: 7px;
+  align-items: center;
+}
+.pk-next-card {
+  background-image: linear-gradient(
+    to bottom,
+    var(--pokemon-color-next) 20%,
+    rgba(255, 255, 255) 50%
+  );
+  height: 367px;
+  width: 236.66px;
+  border-radius: 7px;
+  align-items: center;
+  overflow: hidden;
+  filter: blur(7px);
+}
+.pk-next-card .pk-type-name{
+  background-color: var(--pokemon-color-next);
+}
+.pk-next-card .pk-info-buttons button:hover, .pk-info-buttons button:active {
+  background-color: var(--pokemon-color-next);
+}
+.pk-next-card button {
+  border-color: var(--pokemon-color-next);
+}
+
+/* Inner Card*/
+
+.pk-name-and-id {
+  align-self: baseline;
+  padding: 8px;
+}
+.pk-name-and-id h1 {
+  padding-top: 1px;
+}
+.pk-sprite {
+  padding: 10px;
+}
+.pk-type {
+  padding: 10px 0px;
+}
+.pk-type-name {
+  padding: 0px 7px 2px 7px;
+  border-radius: 10px;
+  background-color: var(--pokemon-color);
+  font-weight: 400;
+}
+.pk-info-buttons button {
+  background: #fff;
+  color: #242424;
+  cursor: pointer;
+  font-size: 10px;
+  font-weight: 400;
+  padding: 5px 14px;
+  z-index: 2;
+}
+
+.pk-info-buttons button:hover, .pk-info-buttons button:active {
+  background-color: var(--pokemon-color);
+}
+
+.pk-about {
+  border-top-right-radius: 0px;
+  border-top-left-radius: 40px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 40px;  
+  border: 1px solid var(--pokemon-color);
+}
+.pk-status{  
+  border-top: 1px solid var(--pokemon-color);
+  border-right: 0px solid var(--pokemon-color);
+  border-bottom: 1px solid var(--pokemon-color);
+  border-left: 0px solid var(--pokemon-color);
+
+}
+.pk-moves {
+  border-top-right-radius: 40px;
+  border-top-left-radius: 0px;
+  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 0px;  
+  border: 1px solid var(--pokemon-color);
+}
+
+.pk-content-info {
+  padding: 30px;
+}
+
+.pk-content-info p {
+  max-width: 200px;
+  text-align: left;
+  padding: 6px 0;
+}
+
+/* End Inner Card */
+
+/* Pokeball */
+
+.pk-pokeball img {
+  margin-top: -30px;
+}
