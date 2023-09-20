@@ -211,7 +211,7 @@ h3 {
 }
 
 .pk-content-info {
-  padding: 20px;
+  padding: 23px;
 }
 
 .pk-content-info p {
@@ -226,6 +226,7 @@ h3 {
   justify-content: center;
   align-items: center;
   gap: 15px;
+  margin-top: -4px;
   padding: 0 3px 0 7px;
 }
 .pk-status-even {
