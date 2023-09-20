@@ -20,6 +20,7 @@ const POKEMON_COLORS_BY_TYPE = {
   steel: "#60a2ba",
   fairy: "#ef71ef",
 };
+const pokemonImagePath = "./assets/img/pokeball.png";
 
 const currentCard = document.querySelector(".pk-current-card");
 const previousCard = document.querySelector(".pk-previous-card");
@@ -288,7 +289,7 @@ const pokemonCardTemplate = (pokemonData) => {
   const capitalizedPokemonName = capitalizeFirstLetter(pokemonData.name);
 
   return `<div class="pk-name-and-id pk-display-flex">
-    <img src="./assets/img/pokeball.png" alt="Pokeball-icon" width="20px" height="20px">
+    <img src="${pokemonImagePath}" alt="Pokeball-icon" width="20px" height="20px">
     <h1 class="pk-name">${capitalizedPokemonName} #${pokemonData.id}</h1>
   </div>
   <div class="pk-sprite">
