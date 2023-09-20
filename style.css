@@ -3,7 +3,11 @@
 
   color-scheme: light dark;
   color: rgba(34, 33, 33, 0.87);
-  background-color: #d7d7d7;
+  /* background-color: #d7d7d7; */
+  background: radial-gradient(circle at 50% 100%, #eeeeee80 5%, #eeeeee 5% 10%, #eeeeee80 10% 15%, #eeeeee 15% 20%, #eeeeee80 20% 25%, #eeeeee 25% 30%, #eeeeee80 30% 35%, #eeeeee 35% 40%, transparent 40%), radial-gradient(circle at 100% 50%, #eeeeee80 5%, #eeeeee 5% 10%, #eeeeee80 10% 15%, #eeeeee 15% 20%, #eeeeee80 20% 25%, #eeeeee 25% 30%, #eeeeee80 30% 35%, #eeeeee 35% 40%, transparent 40%), radial-gradient(circle at 50% 0%, #eeeeee80 5%, #eeeeee 5% 10%, #eeeeee80 10% 15%, #eeeeee 15% 20%, #eeeeee80 20% 25%, #eeeeee 25% 30%, #eeeeee80 30% 35%, #eeeeee 35% 40%, transparent 40%), radial-gradient(circle at 0 50%, #eeeeee80 5%, #eeeeee 5% 10%, #eeeeee80 10% 15%, #eeeeee 15% 20%, #eeeeee80 20% 25%, #eeeeee 25% 30%, #eeeeee80 30% 35%, #eeeeee 35% 40%, transparent 40%);
+  background-size: 3em 3em;
+  background-color: #fff9f9;
+  opacity: 1;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,7 +17,7 @@
 
   --pokemon-color: #f5c400;
   --pokemon-color-next: #ffffff;
-  --pokemon-color-previous: #ffffff;
+  --pokemon-color-previous: ;
 }
 
 *,
@@ -36,6 +40,10 @@ p {
   margin: 0;
   font-size: 12px;
 }
+h3 {
+  padding: 0;
+  margin: 0;
+}
 
 /* Display Styles */
 
@@ -49,11 +57,10 @@ p {
 
 /* End Display Styles */
 
-.pk-spans { /* Ajustar esto en media queries*/
+.pk-spans {
   align-items: center;
   justify-content: center;
-  top: 43.8%;
-  right: 0%;
+  top: 44%;
   position: absolute;
   width: 100%;
   gap: 14.5em;
@@ -67,10 +74,10 @@ p {
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 25px;
 }
 
 .pk-three-cards {
-  background-color: rgb(255, 255, 255);
   align-items: center;
   justify-content: center;
   max-width: 100%;
@@ -92,11 +99,12 @@ p {
   filter: blur(7px);
 }
 
-.pk-previous-card .pk-type-name{
+.pk-previous-card .pk-type-name {
   background-color: var(--pokemon-color-previous);
 }
 
-.pk-previous-card .pk-info-buttons button:hover, .pk-info-buttons button:active {
+.pk-previous-card .pk-info-buttons button:hover,
+.pk-info-buttons button:active {
   background-color: var(--pokemon-color-previous);
 }
 .pk-previous-card button {
@@ -128,10 +136,11 @@ p {
   overflow: hidden;
   filter: blur(7px);
 }
-.pk-next-card .pk-type-name{
+.pk-next-card .pk-type-name {
   background-color: var(--pokemon-color-next);
 }
-.pk-next-card .pk-info-buttons button:hover, .pk-info-buttons button:active {
+.pk-next-card .pk-info-buttons button:hover,
+.pk-info-buttons button:active {
   background-color: var(--pokemon-color-next);
 }
 .pk-next-card button {
@@ -151,7 +160,7 @@ p {
   padding: 10px;
 }
 
-.pk-sprite img{  
+.pk-sprite img {
   max-width: 170px;
 }
 
@@ -174,7 +183,8 @@ p {
   z-index: 2;
 }
 
-.pk-info-buttons button:hover, .pk-info-buttons button:active {
+.pk-info-buttons button:hover,
+.pk-info-buttons button:active {
   background-color: var(--pokemon-color);
 }
 
@@ -182,21 +192,21 @@ p {
   border-top-right-radius: 0px;
   border-top-left-radius: 40px;
   border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 40px;  
+  border-bottom-left-radius: 40px;
   border: 1px solid var(--pokemon-color);
 }
-.pk-status{  
+.pk-status {
   border-top: 1px solid var(--pokemon-color);
   border-right: 0px solid var(--pokemon-color);
   border-bottom: 1px solid var(--pokemon-color);
   border-left: 0px solid var(--pokemon-color);
-
 }
+
 .pk-moves {
   border-top-right-radius: 40px;
   border-top-left-radius: 0px;
   border-bottom-right-radius: 40px;
-  border-bottom-left-radius: 0px;  
+  border-bottom-left-radius: 0px;
   border: 1px solid var(--pokemon-color);
 }
 
@@ -210,7 +220,7 @@ p {
   padding: 6px 0;
 }
 
-.pk-status-info{
+.pk-status-info {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -218,22 +228,23 @@ p {
   gap: 15px;
   padding: 0 3px 0 7px;
 }
-.pk-status-even{
+.pk-status-even {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.pk-status-odds{
+.pk-status-odds {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
-.pk-moves-names{
+.pk-moves-names {
   gap: 20px;
 }
 
-.pk-moves-left, .pk-moves-right{
+.pk-moves-left,
+.pk-moves-right {
   display: flex;
   flex-direction: column;
   align-items: flex-start;

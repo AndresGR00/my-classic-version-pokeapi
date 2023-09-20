@@ -122,6 +122,7 @@ const displayMovesInfo = async (card, pokemonId) => {
     const apiUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonId}`;
     const res = await fetch(apiUrl);
     const response = await res.json();
+    console.log(response)
 
     // Crear el contenido HTML interpolado
     const movesInfo = `<div class="pk-moves-names pk-display-flex">
@@ -291,7 +292,7 @@ const pokemonCardTemplate = (pokemonData) => {
     <h1 class="pk-name">${capitalizedPokemonName} #${pokemonData.id}</h1>
   </div>
   <div class="pk-sprite">
-    <img src="${pokemonData.sprites.other.dream_world.front_default}" alt="${pokemonData.name}" height="105px">
+    <img src="${pokemonData.sprites.versions["generation-v"]["black-white"].animated.front_shiny}" alt="${pokemonData.name}" height="105px">
   </div>
   <div class="pk-type">
     <h2 class="pk-type-name">${pokemonData.types[0].type.name}</h2>
