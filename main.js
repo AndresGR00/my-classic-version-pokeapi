@@ -20,7 +20,7 @@ const POKEMON_COLORS_BY_TYPE = {
   steel: "#60a2ba",
   fairy: "#ef71ef",
 };
-const pokemonImagePath = "./assets/img/pokeball.png";
+const pokemonImagePath = "./public/pokeball.png";
 
 const currentCard = document.querySelector(".pk-current-card");
 const previousCard = document.querySelector(".pk-previous-card");
